@@ -1,14 +1,11 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
+import { StyledHomePage } from "./styled"
 
 function HomePage() {
   return (
-    <div>
+    <StyledHomePage>
       <h1>HomePage</h1>
-      <Button variant="contained" color="primary">
-        TESTANDOOOOOO
-      </Button>
-    </div>
+    </StyledHomePage>
   );
 }
 
