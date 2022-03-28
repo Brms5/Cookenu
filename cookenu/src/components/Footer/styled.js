@@ -15,8 +15,12 @@ export const StyledIconsDiv = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: end;
+  align-items: center;
   width: 100%;
-  height: 40%;
-  /* background-color: blue; */
+  height: 50%;
 `;
+
+export const StyledH3 = styled.h3`
+  margin: 0px;
+`;
+
