@@ -9,6 +9,7 @@ export const StyledFooter = styled.div`
   justify-content: center;
   align-items: center;
   color: black; // -> Resolver a integração das cores bases
+  background-color: #7fff00;
 `;
 
 export const StyledIconsDiv = styled.div`

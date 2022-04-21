@@ -6,5 +6,6 @@ export const StyledToolbar = styled(Toolbar)`
   flex-direction: row;
   justify-content: space-between;
   color: black; // -> Resolver a integração das cores bases
+  height: 10vh;
 `;
 
