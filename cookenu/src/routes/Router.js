@@ -8,7 +8,6 @@ import AddRecipesPage from "../pages/AddRecipesPage/AddRecipesPage";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
-import { GlobalStyled } from "../constants/GlobalStyled";
 
 function Router() {
   return (

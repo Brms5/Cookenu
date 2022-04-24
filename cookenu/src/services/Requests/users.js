@@ -13,7 +13,7 @@ export const signup = (body, clear, goToLogin) => {
     });
 };
 
-export const login = (body, clear, goToFeed) => {
+export const login = (body, clear, goToFeed, setLoginLogoutButton) => {
   axios
     .post(`${BASE_URL}/user/login`, body)
     .then((res) => {
@@ -21,6 +21,7 @@ export const login = (body, clear, goToFeed) => {
       alert("Login efetuado com sucesso!");
       clear();
       goToFeed();
+      setLoginLogoutButton("Logout");
     })
     .catch((err) => {
       alert(err.response.data.message);
