@@ -1,29 +1,45 @@
 import * as React from "react";
 import TextField from "@mui/material/TextField";
-import { LoginFormContainer } from "./styled";
+import { SignupFormContainer } from "./styled";
 import Button from "@mui/material/Button";
 import useForm from "../../hooks/userForm";
 import { useNavigate } from "react-router-dom";
-import { login } from "../../services/Requests/users"
+import { signup } from "../../services/Requests/users";
 
-export default function Login() {
-  const [form, onChange, clear] = useForm({ email: "", password: "" });
+export default function Signup() {
+  const [form, onChange, clear] = useForm({
+    name: "",
+    email: "",
+    password: "",
+  });
   const body = form;
 
   const navigate = useNavigate();
-  const goToFeed = () => {
-    navigate("/");
-  };
+  const goToLogin = () => { 
+    navigate("/login");
+   };
 
   const onSubmitForm = (event) => {
     event.preventDefault();
-    login(body, clear, goToFeed);
+    signup(body, clear, goToLogin);
   };
 
   return (
     <div>
       <form onSubmit={onSubmitForm}>
-        <LoginFormContainer>
+        <SignupFormContainer>
+          <TextField
+            name={"name"}
+            value={form.name}
+            onChange={onChange}
+            label="Nome"
+            type="text"
+            variant="standard"
+            size="medium"
+            fullWidth
+            margin={"normal"}
+            required
+          />
           <TextField
             name={"email"}
             value={form.email}
@@ -49,7 +65,7 @@ export default function Login() {
             margin={"normal"}
             required
           />
-        </LoginFormContainer>
+        </SignupFormContainer>
         <Button
           sx={{
             color: "black",
@@ -61,18 +77,9 @@ export default function Login() {
           fullWidth
           type="submit"
         >
-          Login!!!
+          FAZER CADASTRO!
         </Button>
       </form>
-      <Button
-        sx={{ color: "black", backgroundColor: "#7FFF00" }}
-        variant="contained"
-        size="large"
-        fullWidth
-        onClick={() => navigate("/signup")}
-      >
-        NÃO TEM CONTA?
-      </Button>
     </div>
   );
 }

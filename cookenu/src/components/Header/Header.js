@@ -1,14 +1,14 @@
 import React from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Button from "@material-ui/core/Button";
-import { StyledToolbar } from "./styled"
+import { StyledToolbar } from "./styled";
 import { useNavigate } from "react-router-dom";
 import RestaurantMenuIcon from "@mui/icons-material/RestaurantMenu";
 
 function Header() {
   const navigate = useNavigate();
   return (
-    <AppBar position="static" font>
+    <AppBar position="static" font >
       <StyledToolbar>
         <Button
           onClick={() => navigate("/")}
@@ -18,7 +18,7 @@ function Header() {
         >
           COOKENU
         </Button>
-        <RestaurantMenuIcon fontSize="large"/>
+        <RestaurantMenuIcon fontSize="large" />
         <Button
           onClick={() => navigate("/login")}
           color="inherit"
