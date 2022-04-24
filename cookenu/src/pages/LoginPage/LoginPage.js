@@ -14,7 +14,10 @@ function LoginPage() {
       <LoginImageContainer>
         <img src={cartoonchef} alt="Chefe de cozinha em desenho" />
       </LoginImageContainer>
-      <LoginInputContainer><H1Style>Cookenu</H1Style><Login /></LoginInputContainer>
+      <LoginInputContainer>
+        <H1Style>Cookenu</H1Style>
+        <Login />
+      </LoginInputContainer>
     </LoginPageContainer>
   );
 }
