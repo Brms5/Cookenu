@@ -7,8 +7,11 @@ import {
 } from "./styled";
 import cartoonchef from "../../assets/cartoonchef.webp";
 import Login from "../../components/Login/Login";
+import useUnprotectedPage from "../../hooks/useUnprotectedPage";
 
 function LoginPage() {
+  useUnprotectedPage();
+
   return (
     <LoginPageContainer>
       <LoginImageContainer>
