@@ -19,7 +19,7 @@ function Router() {
         <Route exact path="/signup" element={<SignUpPage />} />
         <Route exact path="/recipe" element={<RecipeDetailPage />} />
         <Route exact path="/add-recipe" element={<AddRecipesPage />} />
-        <Route element={<ErrorPage />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
       <Footer />
     </BrowserRouter>
